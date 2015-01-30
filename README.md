@@ -32,6 +32,10 @@ Resize image with ImageMagick
 ```javascript
 // load module
 var imageMagick = require('image-magick');
+
 // resize image only if bigger
 imageMagick.convert('convert test.jpg -resize 64x64\> small_test.jpg');
+
+// create pdf preview (of first page -> [0])
+imageMagick.convert('convert test.pdf[0] -flatten test_preview.jpg');
 ```
